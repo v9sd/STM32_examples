@@ -1,0 +1,5 @@
+openocd/install
+openocd/openocd-code
+**/CMakeLists.txt.user
+zephyr/samples/*-build
+**/*.swp
