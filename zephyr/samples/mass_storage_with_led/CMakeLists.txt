@@ -2,9 +2,11 @@
 
 cmake_minimum_required(VERSION 3.20.0)
 
+set(ZEPHYR_SDK_INSTALL_DIR "/opt/zephyr-sdk-0.16.1")
+
 set(BOARD "stm32f401_mini")
 
-find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE} PACKAGE_FIND_VERSION 0.16.1)
 project(mass_storage_with_led)
 
 FILE(GLOB app_sources src/*.c)

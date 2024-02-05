@@ -35,7 +35,8 @@ if [ ! -z ${SAMPLE_NAME} ] && [ ! -z ${BIN_PATH} ]; then
 fi
 
 if [ ! -z ${SAMPLE_NAME} ]; then
-  BIN_PATH="${SCRIPTPATH}/../zephyr/samples/${SAMPLE_NAME}-build/zephyr/zephyr.elf"
+  echo "SAMPLE NAME IS NOT BEEN EMPTY"
+  BIN_PATH="${SCRIPT_DIR}/../zephyr/samples/${SAMPLE_NAME}-build/Debug/zephyr/zephyr.bin"
 fi
 
 BIN_PATH=$(realpath "${BIN_PATH}")
@@ -44,6 +45,11 @@ if [ ! -f ${BIN_PATH} ]; then
   echo "File ${BIN_PATH} isn't exist"
   exit 1
 fi
+
+echo "================================"
+echo "${SAMPLE_NAME}"
+echo "${BIN_PATH}"
+echo "================================"
 
 { echo "program "${BIN_PATH}" 0x08000000"; echo "reset"; sleep 10;} | telnet 127.0.0.1 4444
 

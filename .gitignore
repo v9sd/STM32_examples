@@ -3,3 +3,6 @@ openocd/openocd-code
 **/CMakeLists.txt.user
 zephyr/samples/*-build
 **/*.swp
+**/compile_commands.json
+**/build-*-Debug
+**/build-*-Release

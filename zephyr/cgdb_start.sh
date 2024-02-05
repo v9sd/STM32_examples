@@ -35,7 +35,7 @@ if [ ! -z ${SAMPLE_NAME} ] && [ ! -z ${ELF_PATH} ]; then
 fi
 
 if [ ! -z ${SAMPLE_NAME} ]; then
-  ELF_PATH="${SCRIPTPATH}/samples/${SAMPLE_NAME}-build/zephyr/zephyr.elf"
+  ELF_PATH="${SCRIPTPATH}/samples/${SAMPLE_NAME}-build/Debug/zephyr/zephyr.elf"
 fi
 
 ELF_PATH=$(realpath "${ELF_PATH}")
